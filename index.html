@@ -13,40 +13,29 @@
     >
       <h1>PICKER</h1>
     </nav>
-    <div
-      class="container flex flex-col items-center justify-between p-6 mx-auto md:flex-row"
-    >
+    <div class="container flex flex-col items-center justify-between p-6 mx-auto md:flex-row">
       <!--Form for adding new student and subject-->
-      <form class="w-1/4">
-        <h1 class="text-center font-bold text-white p-4 ">Ajouter un nouvelle apprenant</h1>
+      <form class="w-4/10 flex flex-col">
+        <h1 class="text-2xl font-bold text-white mb-5 text-center p-4 md:w-[450px]">Ajouter un nouvelle apprenant</h1>
         <div>
-          <label
-            for="name"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-            >Nom d'apprenant</label
-          >
           <input
             type="text"
             id="name"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="John"
+            placeholder="Nom d'apprenant"
             required
           />
         </div>
-        <div>
-          <label
-            for="sjt_veille"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-            >Sujet de veille</label
-          >
+        <div class="mt-3">
           <input
             type="text"
             id="name"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="John"
+            placeholder="Sujet de veille"
             required
           />
         </div>
+        <button type="button" class="py-2.5 w-full mt-3 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Ajouter</button>
       </form>
       <!--Table for display all student with sujet de veille-->
       <table class="w-1/2 text-sm text-left text-gray-500 dark:text-gray-400">
