@@ -95,19 +95,23 @@
       <div class="container mx-auto p-4 text-center">
         <button
           id="btnExportToCsv"
-          onclick="downloadPdf()"
+          onclick="Export()"
           type="button"
+          id="btnExport"
           class="py-2.5 mt-3 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
         >
           Download
         </button>
       </div>
     </div>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"
+    ></script>
     <script src="index.js"></script>
-    <script type="text/javascript" src="jquery.js"></script>
-
-    <script type="text/javascript" src="pdfmake.min.js"></script>
-
-    <script type="text/javascript" src="html2canvas.min.js"></script>
   </body>
 </html>

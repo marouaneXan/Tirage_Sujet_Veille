@@ -3,7 +3,6 @@ let nameInput = document.getElementById("name");
 let sjtInput = document.getElementById("sjt_veille");
 let btnAdd = document.getElementById("add");
 let results = [];
-let listR = [];
 let D = moment().format("YYYY-MM-DD");
 let table1 = document.querySelector("#table1");
 let table2 = document.querySelector("#table2");
@@ -55,23 +54,21 @@ const getRandomStudent = () => {
   <td id="subj" class="py-4 px-6">${day}</td>
 </tr>`;
   table2.innerHTML += template;
-  console.log(randomStudent);
-};
+  return randomStudent
+}
 
 
-function downloadPdf() {
-  html2canvas($("#cc")[0], {
-    onrendered: function (canvas) {
-      var data = canvas.toDataURL();
-      var docDefinition = {
-        content: [
-          {
-            image: data,
-            width: 500,
-          },
-        ],
-      };
-      pdfMake.createPdf(docDefinition).download("Result.pdf");
-    },
+function Export() {
+  html2canvas(document.getElementById('table2'), {
+      onrendered: function (canvas) {
+          var data = canvas.toDataURL();
+          var docDefinition = {
+              content: [{
+                  image: data,
+                  width: 500
+              }]
+          };
+          pdfMake.createPdf(docDefinition).download("HtmlToPdf.pdf");
+      }
   });
 }
